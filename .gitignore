@@ -1,0 +1,12 @@
+__pycache__/
+depr/
+idxs/
+outputs/
+tmp/
+trail/
+*.pth
+*.pdf
+*.png
+*.jpg
+*.tar
+todo.txt
