@@ -102,7 +102,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', type=int, default=16)
 
     # parser.add_argument('--principle', type=str, default='random', choices=['random', 'herding', 'kcentergreedy', 'maha_a', 'maha_t', 'leastconfidence', 'entropy', 'margin', 'forgetting', 'grand', 'el2n', 'contextualdiversity'])
-    parser.add_argument('--principle', type=str, default='random', choices=['random', 'herding', 'kcentergreedy', 'leastconfidence', 'entropy', 'margin', 'forgetting', 'grand', 'el2n', 'contextualdiversity', 'cle', 'clh'])
+    parser.add_argument('--principle', type=str, default='random', choices=['random', 'herding', 'kcentergreedy', 'leastconfidence', 'entropy', 'margin', 'forgetting', 'memory', 'grand', 'el2n', 'contextualdiversity', 'cle', 'clh'])
 
     parser.add_argument('--arch', type=str, default='resnet18', choices=['resnet18', 'resnet50', 'vit_small', 'vit_base'])
     parser.add_argument('--pretrain', type=str, default='weakly', choices=['weakly', 'fully', 'tin'])

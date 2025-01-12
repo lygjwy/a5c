@@ -6,6 +6,7 @@ from .kcentergreedy import kCenterGreedy
 # from .maha import Maha
 from .uncertainty import Uncertainty
 from .forgetting import Forgetting
+from .memory import Memory
 from .grand import GraNd
 from .el2n import EL2N
 from .contextualdiversity import ContextualDiversity
@@ -30,8 +31,11 @@ def get_selector(principle, num_classes, data_loader, models):
     #     return Maha(num_classes, data_loader, models, principle)
     elif principle in ['leastconfidence', 'entropy', 'margin']:
         return Uncertainty(num_classes, data_loader, models, principle)
-    elif principle in ['forgetting']:
-        return Forgetting(num_classes, data_loader, models)
+    elif principle in ['forgetting', 'memory']:
+        if principle in 'fogetting':
+            return Forgetting(num_classes, data_loader, models)
+        else:
+            return Memory(num_classes, data_loader, models)
     elif principle in ['cle', 'clh']:
         return CumuLoss(num_classes, data_loader, models, principle)
     elif principle in ['grand', 'el2n']:
